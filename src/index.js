@@ -11,23 +11,23 @@ export const checkAnswer = (correctAnswer, userAnswer, name) => {
     if (parseInt(userAnswer) === correctAnswer) {
       console.log('Correct!');
       return true;
-    } else {
+    }  
+
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return false;
-    }
   };
-
+ 
   export const checkAnswerString = (correctAnswer, userAnswer, name) => {
     // Прямое сравнение строк
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
       return true;
-    } else {
+    }  
+
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return false;
-    }
   };
 
 // Функция для вычисления НОД
@@ -44,4 +44,3 @@ export function gcd(a, b) {
 export const startGame = (game) => {
   game();
 };
-

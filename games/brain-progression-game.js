@@ -1,18 +1,18 @@
 import { getRandomInt, askQuestion, checkAnswer } from '../src/index.js';
 
 export const runBrainProgressionGame = () => {
-  const name = askQuestion("Welcome to the Brain Games!\nMay I have your name? ");
+  const name = askQuestion('Welcome to the Brain Games!\nMay I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log("What number is missing in the progression?");
+  console.log('What number is missing in the progression?');
   
   const rounds = 3;  
 
-  for (let round = 1; round <= rounds; round++) {
+  for (let round = 1; round <= rounds; round = round + 1) {
     const { progression, hiddenNumber } = generateProgression();
     
     // Вопрос пользователю
     console.log(`Question: ${progression}`);
-    const userAnswer = askQuestion("Your answer: ");
+    const userAnswer = askQuestion('Your answer: ');
     
     if (!checkAnswer(hiddenNumber, userAnswer, name)) {
       return;   
@@ -30,7 +30,7 @@ export const generateProgression = () => {
 
   // Создаем прогрессию
   const progression = [];
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length; i = i + 1) {
     progression.push(start + step * i);
   }
 
