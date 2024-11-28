@@ -1,4 +1,4 @@
-import { getRandomInt, askQuestion, checkAnswerString } from '../src/index.js';
+import { getRandomInt, askQuestion, checkAnswer } from '../src/index.js';
 
 export const runBrainCalcGame = () => {
   const name = askQuestion("Welcome to the Brain Games!\nMay I have your name? ");
@@ -34,7 +34,7 @@ export const runBrainCalcGame = () => {
     const userAnswer = askQuestion("Your answer: ");
 
     // Проверяем ответ с использованием функции checkAnswer
-    if (!checkAnswerString(correctAnswer, userAnswer, name)) {
+    if (!checkAnswer(correctAnswer, userAnswer, name)) {
       return; // Если ответ неверный, завершаем игру
     }
   }
