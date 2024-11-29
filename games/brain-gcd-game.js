@@ -1,6 +1,6 @@
 import { getRandomInt, askQuestion, checkAnswer, gcd } from '../src/index.js';
 
-export const runBrainGcdGame = () => {
+const runBrainGcdGame = () => {
   const name = askQuestion("Welcome to the Brain Games!\nMay I have your name? ");
   console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
@@ -23,3 +23,5 @@ export const runBrainGcdGame = () => {
 
   console.log(`Congratulations, ${name}!`);
 };
+
+export default runBrainGcdGame;

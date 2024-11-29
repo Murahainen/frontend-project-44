@@ -1,4 +1,3 @@
-
 import { getRandomInt, askQuestion, checkAnswerString } from '../src/index.js';
 import readlineSync from 'readline-sync';
 
@@ -27,4 +26,3 @@ export const runBrainEvenGame = () => {
 
   console.log(`Congratulations, ${name}!`);
 };
-
