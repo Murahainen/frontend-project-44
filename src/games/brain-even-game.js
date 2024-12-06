@@ -1,5 +1,5 @@
-import { getRandomInt, askQuestion, checkAnswerString } from '../src/index.js';
 import readlineSync from 'readline-sync';
+import { getRandomInt, askQuestion, checkAnswerString } from '../index.js';
 
 // Функция для проверки чётности числа
 const isEven = (number) => number % 2 === 0;
@@ -10,9 +10,9 @@ export const runBrainEvenGame = () => {
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  const rounds = 3;  
+  const rounds = 3;
 
-  for (let round = 1; round <= rounds; round++) {
+  for (let round = 1; round <= rounds; round += 1) {
     const number = getRandomInt(1, 100); // Генерация случайного числа
     const correctAnswer = isEven(number) ? 'yes' : 'no'; // Проверка, простое ли число
 
@@ -20,7 +20,7 @@ export const runBrainEvenGame = () => {
     const userAnswer = askQuestion("Your answer: ").trim().toLowerCase();
     
     if (!checkAnswerString(correctAnswer, userAnswer, name)) {
-      return;  
+      return;
     }
   }
 

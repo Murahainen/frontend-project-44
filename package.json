@@ -1,9 +1,8 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Murahainen/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Murahainen/frontend-project-44/actions)",
-  "main": "index.js",
-  "scripts": {
+  "description": "Brain Games — это коллекция из пяти простых консольных игр, созданных для тренировки логического мышления, внимательности и математических способностей.",
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/brain-calc.js",
     "starts": "node bin/brain-gcd.js"
@@ -28,8 +27,6 @@
   },
   "homepage": "https://github.com/Murahainen/frontend-project-44#readme",
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
-import { getRandomInt, askQuestion, checkAnswerString } from '../src/index.js';
+import { getRandomInt, askQuestion, checkAnswerString } from '../index.js';
 
 // Проверка на простое число
 const isPrime = (num) => {
   if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i = i + 1) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -12,7 +12,7 @@ const isPrime = (num) => {
 };
 
 const runBrainPrimeGame = () => {
-  const name = askQuestion("Welcome to the Brain Games!\nMay I have your name? ");
+  const name = askQuestion('Welcome to the Brain Games!\nMay I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   
