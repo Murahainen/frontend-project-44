@@ -4,7 +4,7 @@ import { getRandomInt, askQuestion, checkAnswerString } from '../index.js';
 // Функция для проверки чётности числа
 const isEven = (number) => number % 2 === 0;
 
-export const runBrainEvenGame = () => {
+const runBrainEvenGame = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -17,8 +17,8 @@ export const runBrainEvenGame = () => {
     const correctAnswer = isEven(number) ? 'yes' : 'no'; // Проверка, простое ли число
 
     console.log(`Question: ${number}`);
-    const userAnswer = askQuestion("Your answer: ").trim().toLowerCase();
-    
+    const userAnswer = askQuestion('Your answer: ').trim().toLowerCase();
+
     if (!checkAnswerString(correctAnswer, userAnswer, name)) {
       return;
     }
@@ -26,3 +26,5 @@ export const runBrainEvenGame = () => {
 
   console.log(`Congratulations, ${name}!`);
 };
+
+export default runBrainEvenGame;

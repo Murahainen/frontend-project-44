@@ -1,4 +1,9 @@
-import { getRandomInt, askQuestion, checkAnswer, gcd } from '../index.js';
+import {
+  getRandomInt,
+  askQuestion,
+  checkAnswer,
+  gcd,
+} from '../index.js';
 
 const runBrainGcdGame = () => {
   const name = askQuestion('Welcome to the Brain Games!\nMay I have your name? ');

@@ -8,27 +8,27 @@ export const askQuestion = (question) => readlineSync.question(question);
 
 // Функция для проверки ответа
 export const checkAnswer = (correctAnswer, userAnswer, name) => {
-    if (parseInt(userAnswer) === correctAnswer) {
-      console.log('Correct!');
-      return true;
-    }
+  if (parseInt(userAnswer, 10) === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
 
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return false;
-  };
+  console.log(`${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  console.log(`Let's try again, ${name}!`);
+  return false;
+};
 
-  export const checkAnswerString = (correctAnswer, userAnswer, name) => {
-    // Прямое сравнение строк
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      return true;
-    }
+export const checkAnswerString = (correctAnswer, userAnswer, name) => {
+  // Прямое сравнение строк
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
 
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return false;
-  };
+  console.log(`${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  console.log(`Let's try again, ${name}!`);
+  return false;
+};
 
 // Функция для вычисления НОД
 export function gcd(a, b) {
